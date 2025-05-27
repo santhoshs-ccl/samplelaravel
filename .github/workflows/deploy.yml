@@ -18,7 +18,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}  # Use the SSH private key for authentication
           port: ${{ secrets.SERVER_PORT }}
           script: |
-            cd /var/www/samplelarvel/
+            cd /var/www/samplelaravel/
             git pull
             composer install
             php artisan migrate --seed
