@@ -22,10 +22,10 @@ jobs:
             git pull
             composer install
             php artisan migrate --seed
-            sudo chown -R www-data:www-data storage bootstrap/cache
-            sudo chown -R www-data:www-data bootstrap/cache
-            sudo chmod -R 777 storage bootstrap/cache
-            sudo chmod -R 777 bootstrap/cache
+            sudo chown -R ubuntu:www-data storage bootstrap/cache
+            sudo chown -R ubuntu:www-data bootstrap/cache
+            sudo chmod -R 775 storage bootstrap/cache
+            sudo chmod -R 775 bootstrap/cache
             php artisan config:cache
             php artisan route:cache
             php artisan view:cache
